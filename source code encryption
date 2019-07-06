@@ -1,0 +1,299 @@
+#include<iostream>  
+#include<string.h> 
+#include<fstream>  
+using namespace std; 
+
+int main() 
+{
+	    system("cls"); 
+	printf(R"EOF( 
+       _______  __    _  ___   _  ______    ___   _______  _______  ___      
+      |       ||  |  | ||   | | ||    _ |  |   | |       ||       ||   |     
+      |    ___||   |_| ||   |_| ||   | ||  |   | |    _  ||  _____||   |     
+      |   |___ |       ||      _||   |_||_ |   | |   |_| || |_____ |   |     
+      |    ___||  _    ||     |_ |    __  ||   | |    ___||_____  ||   |     
+      |   |___ | | |   ||    _  ||   |  | ||   | |   |     _____| ||   |     
+      |_______||_|  |__||___| |_||___|  |_||___| |___|    |_______||___|
+)EOF");
+         cout << "\n\n\n\t\t\tTekan Enter untuk memulai";
+		 
+	
+         cin.get(); 
+    
+	char string[1000]; 
+    cout << "\n\n\nEnter string : ";
+    gets(string); 
+	cout << "\n\n\n\t\t*Output dapat anda cek di dalam Folder*";
+
+    int length;
+    length=strlen(string);
+    ofstream out("output.txt"); 
+    ifstream in; 
+    for(int i=0; i<length; i++)
+    {
+        switch(string[i])
+        {
+            case 'a' :
+            case 'A' :
+                {
+                    out << ".- ";
+                    break;
+                }
+            case 'b' :
+            case 'B' :
+                {
+                    out << "-... ";
+                    break;
+                }
+            case 'c' :
+            case 'C' :
+                {
+                    out << "-.-. ";
+                    break;
+                }
+            case 'd' :
+            case 'D' :
+                {
+                    out << "-.. ";
+                    break;
+                }   
+            case 'e' :
+            case 'E' :
+                {
+                    out << ". ";
+                    break;
+                }
+            case 'f' :
+            case 'F' :
+                {
+                    out << "..-. ";
+                    break;
+                }
+            case 'g' :
+            case 'G' :
+                {
+                    out << "--. ";
+                    break;
+                }
+            case 'h' :
+            case 'H' :
+                {
+                    out << ".... ";
+                    break;
+                }
+            case 'i' :
+            case 'I' :
+                {
+                    out << ".. ";
+                    break;
+                }   
+            case 'j' :
+            case 'J' :
+                {
+                    out << ".--- "; 
+                    break;
+                }
+            case 'k' :
+            case 'K' :
+                {
+                    out << "-.- ";
+                    break;
+                }
+            case 'l' :
+            case 'L' :
+                {
+                    out << ".-.. ";
+                    break;
+                }
+            case 'm' :
+            case 'M' :
+                {
+                    out << "-- ";
+                    break;
+                }
+            case 'n' :
+            case 'N' :
+                {
+                    out << "-. ";
+                    break;
+                }   
+            case 'o' :
+            case 'O' :
+                {
+                    out << "--- ";
+                    break;
+                }
+            case 'p' :
+            case 'P' :
+                {
+                    out << ".--. ";
+                    break;
+                }
+            case 'q' :
+            case 'Q' :
+                {
+                    out << "--.- ";
+                    break;
+                }
+            case 'r' :
+            case 'R' :
+                {
+                    out << ".-. ";
+                    break;
+                }
+            case 's' :
+            case 'S' :
+                {
+                    out << "... ";
+                    break;
+                }   
+            case 't' :
+            case 'T' :
+                {
+                    out << "- ";
+                    break;
+                }
+            case 'u' :
+            case 'U' :
+                {
+                    out << "..- ";
+                    break;
+                }
+            case 'v' :
+            case 'V' :
+                {
+                    out << "...- ";
+                    break;
+                }
+            case 'w' :
+            case 'W' :
+                {
+                    out << ".-- ";
+                    break;
+                }
+            case 'x' :
+            case 'X' :
+                {
+                    out << "-..- ";
+                    break;
+                }
+            case 'y' :
+            case 'Y' :
+                {
+                    out << "-.-- ";
+                    break;
+                }
+            case 'z' :
+            case 'Z' :
+                {
+                    out << "--.. ";
+                    break;
+                }
+            case ' ' :
+                {
+                    out << " /  ";
+                    break;
+                }
+            case '0' :
+                {
+                    out << "----- ";
+                    break;
+                }
+            case '1' :
+                {
+                    out << ".---- ";
+                    break;
+                }
+            case '2' :
+                {
+                    out << "..--- ";
+                    break;
+                }
+            case '3' :
+                {
+                    out << "...-- ";
+                    break;
+                }
+            case '4' :
+                {
+                    out << "....- ";
+                    break;
+                }
+            case '5' :
+                {
+                    out << "..... ";
+                    break;
+                }
+            case '6' :
+                {
+                    out << "-.... ";
+                    break;
+                }
+            case '7' :
+                {
+                    out << "--... ";
+                    break;
+                }
+            case '8' :
+                {
+                    out << "---.. ";
+                    break;
+                }
+            case '9' :
+                {
+                    out << "----. ";
+                    break;
+                }
+            case ',' :
+                {
+                    out << "--..-- ";
+                    break;
+                }
+            case '.' :
+                {
+                    out << ".-.-.- ";
+                    break;
+                }
+            case ';' :
+                {
+                    out << "-.-.-. ";
+                    break;
+                }
+            case ':' :
+                {
+                    out << "---... ";
+                    break;
+                }				
+            case '?' :
+                {
+                    out << "..--.. ";
+                    break;
+                }				
+            case '!' :
+                {
+                    out << "---. ";
+                    break;
+                }	
+            case '"' :
+                {
+                    out << ".----. ";
+                    break;
+                }
+            case '(' :
+                {
+                    out << "-.--. ";
+                    break;
+                }
+            case ')' :
+                {
+                    out << "-.--.- ";
+                    break;
+                }	
+        }
+
+
+    }
+
+    return 0;    
+
+}
