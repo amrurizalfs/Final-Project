@@ -1,0 +1,72 @@
+#include <cstdlib> 
+#include <fstream>  
+#include <iostream> 
+#include <string>   
+#include <sstream>  
+using namespace std; 
+
+const int Kode = 47; 
+string KodeMorse = " abcdefghijklmnopqrstuvwxyz0123456789,.;:?!'()";  
+string morseKunci[Kode] = {"/", ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---", "-.-", ".-..",
+                         "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--", "--..",
+                         "-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "--..--",
+                         ".-.-.-", "-.-.-.", "---...", "..--..", "---.", ".----.", "-.--.", "-.--.-"};
+int main()
+{
+
+    system("cls"); 
+    printf(R"EOF(
+    ______   _______  _______  ___   _  ______    ___   _______  _______  ___  
+   |      | |       ||       ||   | | ||    _ |  |   | |       ||       ||   | 
+   |  _    ||    ___||  _____||   |_| ||   | ||  |   | |    _  ||  _____||   | 
+   | | |   ||   |___ | |_____ |      _||   |_||_ |   | |   |_| || |_____ |   | 
+   | |_|   ||    ___||_____  ||     |_ |    __  ||   | |    ___||_____  ||   | 
+   |       ||   |___  _____| ||    _  ||   |  | ||   | |   |     _____| ||   | 
+   |______| |_______||_______||___| |_||___|  |_||___| |___|    |_______||___|
+)EOF");
+ 
+         cout << "\n\n\n\t\t\tTekan Enter untuk memulai";
+         cin.get();
+
+	int posisiBaris = 1;
+    string userIn = "";
+    cout << "\n\n\nMasukkan Plaintext : " ; 
+    getline(cin,userIn); 
+
+    string MorseAktif = "";
+    istringstream plaintochiper(userIn); 
+
+    while (plaintochiper >> MorseAktif) {
+        int i = 0;  
+        int flag = 1;   
+
+        for (int m = 0; m < MorseAktif.length(); m++) {
+           
+            while (i < Kode) {
+
+                if (MorseAktif == morseKunci[i]) {
+                    cout << KodeMorse.at(i);
+                    flag = 0;
+                    
+                    if (posisiBaris > 9999) {
+                        cout << "\n ";
+                        posisiBaris = 0;
+                    }
+                posisiBaris++;
+                }
+            i++;
+            }
+           
+            if (flag) {
+                cout << "X";
+            
+                if (posisiBaris > 12) {
+                    cout << "\n";
+                    posisiBaris = 0;
+                }
+                posisiBaris++;
+            }
+        }
+    }
+	return 0; 
+}
